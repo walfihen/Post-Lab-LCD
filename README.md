@@ -53,7 +53,7 @@ Arus listrik mengatur posisi kristal cair sehingga menentukan seberapa banyak ca
 5. Mencatat hasil pengamatan.
 
 ### 7. Hasil Pengamatan
-![alt text](https://github.com/walfihen/Post-Lab-LCD.git?raw=true)
+![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/2a9a80becdcc0ea44bf9f88b97ef2093e253e10a/Sreenshoot/post-lab%20LCD.jpg?raw=true)
 
 
 
