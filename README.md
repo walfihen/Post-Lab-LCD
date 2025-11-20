@@ -8,7 +8,7 @@ Identitas
 - Fakultas Teknologi Industri
 - Universitas Bung Hatta
 
-  ## Tujuan Praktikum
+## Tujuan Praktikum
 - Memahami pengertian dan prinsip kerja LCD.
 - Mengamati cara kerja sensor suhu LM35.
 - Menampilkan data suhu dari LM35 ke display LCD.
@@ -94,7 +94,7 @@ void loop() {
 ![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/aea3b2be15bb95940cf02ffe6433aa5c831e8127/Sreenshoot/post-lab%20lcd%20(rangkaian).jpg?raw=true)
 
 ### Gambar Rangkaian Sensor Suhu LM35
-![alt text](?raw=true)
+![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/a86216423eafbf16fa1688ce8cacfd93a4eb2bb1/Sreenshoot/rangkaian%20sensor%20suhu.jpg?raw=true)
 
 ### 7. Hasil Pengamatan
 ![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/2a9a80becdcc0ea44bf9f88b97ef2093e253e10a/Sreenshoot/post-lab%20LCD.jpg?raw=true)
