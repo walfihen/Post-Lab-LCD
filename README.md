@@ -97,7 +97,7 @@ void loop() {
 ![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/a86216423eafbf16fa1688ce8cacfd93a4eb2bb1/Sreenshoot/rangkaian%20sensor%20suhu.jpg?raw=true)
 
 ### 7. Hasil Pengamatan
-![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/2a9a80becdcc0ea44bf9f88b97ef2093e253e10a/Sreenshoot/post-lab%20LCD.jpg?raw=true)Kesimpulan
+![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/2a9a80becdcc0ea44bf9f88b97ef2093e253e10a/Sreenshoot/post-lab%20LCD.jpg?raw=true)
 
 ### 8.Kesimpulan
 - LCD dapat menampilkan data suhu dari LM35 dengan baik.
