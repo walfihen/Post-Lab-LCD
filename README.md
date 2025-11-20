@@ -53,7 +53,7 @@ Arus listrik mengatur posisi kristal cair sehingga menentukan seberapa banyak ca
 5. Mencatat hasil pengamatan.
 
 ### 7. Hasil Pengamatan
-![alt text](https://github.com/walfihen/Program-Rental-Mobil/blob/main/Sreenshot/ss%20output.png?raw=true)
+![alt text](https://github.com/walfihen/Post-Lab-LCD.git?raw=true)
 
 
 
