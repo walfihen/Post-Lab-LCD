@@ -53,6 +53,7 @@ Arus listrik mengatur posisi kristal cair sehingga menentukan seberapa banyak ca
 5. Mencatat hasil pengamatan.
 
 ### 7. Hasil Pengamatan
+![nama gambar](images/namagambar.png)
 
 
 
