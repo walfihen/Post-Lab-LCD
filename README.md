@@ -1,5 +1,5 @@
 # Praktikum Lab IV Basic Analog Electronic
-## Post-Lab LCD
+## Post-Lab LCD & Sensor Suhu LM 35
 
 Identitas
 - Nama : Walfihen
@@ -10,47 +10,91 @@ Identitas
 
   ## Tujuan Praktikum
 - Memahami pengertian dan prinsip kerja LCD.
-- Mengetahui struktur lapisan pada LCD.
-- Menganalisis kelebihan dan kekurangan LCD dalam perangkat elektronik.
-- Mengamati contoh penggunaan LCD di kehidupan sehari-hari.
+- Mengamati cara kerja sensor suhu LM35.
+- Menampilkan data suhu dari LM35 ke display LCD.
+- Menghubungkan LCD dan LM35 dalam sistem berbasis mikrokontroler.
 
- ## Dasar Teori
-### 1. Apa Itu LCD? (Liquid Crystal Display)
-LCD (Liquid Crystal Display) adalah layar yang menggunakan kristal cair untuk menampilkan gambar, teks, atau video. LCD bekerja dengan cara mengatur cahaya yang melewati kristal cair, sehingga membentuk tampilan yang kita lihat di layar.
+## Dasar Teori
+### 1. Pengertian LCD
+LCD (Liquid Crystal Display) adalah layar yang menggunakan **kristal cair** untuk mengatur cahaya dan menampilkan teks atau gambar. LCD bekerja berdasarkan perubahan orientasi kristal cair yang mengatur jumlah cahaya yang melewati panel.
 
 ### 2. Cara Kerja LCD
-LCD bekerja dengan prinsip **polarisasi cahaya**. Lapisan LCD terdiri dari:
-1. Cahaya latar (Backlight)
-2. Filter polarisasi
-3. Lapisan kristal cair
-4. Filter warna RGB (Red, Green, Blue)
+LCD terdiri dari beberapa lapisan:
+1. Backlight
+2. Filter Polarisasi
+3. Kristal Cair
+4. Filter Warna RGB
 
-Arus listrik mengatur posisi kristal cair sehingga menentukan seberapa banyak cahaya yang diteruskan—ini membentuk gambar yang terlihat di layar.
+Kristal cair diatur oleh arus listrik sehingga menentukan tampilan huruf/angka.
 
-### 3. Kelebihan LCD
-- Hemat energi
-- Layar tipis dan ringan
-- Gambar stabil dan jelas
-- Tidak menghasilkan panas berlebih
+### 3.Pengertian Sensor Suhu LM35
+LM35 adalah **sensor suhu analog** yang menghasilkan tegangan sebanding dengan suhu.  
+Karakteristik LM35:
+- Output: **10 mV per 1°C**
+- Akurasi tinggi (±0.5°C)
+- Rentang pengukuran: -55°C sampai 150°C
+- Tidak memerlukan kalibrasi
 
-### 4. Kekurangan LCD
-- Sudut pandang terbatas
-- Warna hitam kurang pekat
-- Respons sedikit lebih lambat dibanding OLED/LED
+Contoh konversi analog:  
+Jika ADC membaca 310 mV → suhu = **31°C**
+
+### 4. Cara Kerja LM35
+- LM35 menghasilkan tegangan analog (0–1,5 V).
+- Mikrokontroler membaca nilai analog tersebut melalui pin ADC.
+- Nilai digital dikonversi ke Celsius dengan rumus:  
+  **Suhu (°C) = (ADC_value × 5V / 1024) / 0.01V**
 
 ### 5. Alat dan Bahan
-- Unit LCD (contoh: LCD display, panel monitor, atau modul LCD 16x2)
-- Kabel jumper (jika menggunakan mikrokontroler)
-- Breadboard (opsional)
-- Arduino/ESP8266 (opsional untuk uji tampilan)
+- Unit LCD ( modul LCD 16x2)
+- Sensor suhu LM35
+- Kabel jumper 
+- Breadboard 
+- Arduino Uno
 - Laptop / PC
 
 ### 6. Langkah Kerja
-1. Mengidentifikasi jenis LCD yang digunakan.
-2. Mengamati struktur fisik LCD.
-3. Menghubungkan LCD ke sistem (berbasis Arduino).
-4. Mengamati perubahan cahaya saat LCD bekerja.
-5. Mencatat hasil pengamatan.
+1. Merangkai LCD sesuai diagram pin.
+2. Merangkai sensor LM35 pada A0 Arduino.
+3. Menghubungkan Arduino ke laptop.
+4. Mengupload program pembacaan suhu.
+5. Mengamati tampilan suhu di LCD.
+6. Mencatat hasil pengamatan setiap 10 detik.
+### code Program :
+int sensorPin = A0;   // LM35 terhubung ke pin A0
+
+void setup() {
+  Serial.begin(9600); // Mulai Serial Monitor
+}
+
+void loop() {
+  // 1. Baca nilai analog (0–1023)
+  int nilaiADC = analogRead(sensorPin);
+
+  // 2. Konversi ADC -> Tegangan
+  float volt = nilaiADC * (5.0 / 1023.0);
+
+  // 3. Konversi Tegangan -> Suhu (LM35 = 10mV per °C)
+  float suhu = volt * 100.0;
+
+  // 4. Tampilkan hasil
+  Serial.print("ADC: ");
+  Serial.print(nilaiADC);
+
+  Serial.print(" | Volt: ");
+  Serial.print(volt);
+
+  Serial.print(" V | Suhu: ");
+  Serial.print(suhu);
+  Serial.println(" C");
+
+  delay(500); // jeda 0.5 detik
+}
+
+### Gambar Rangkaian LCD
+![alt text](?raw=true)
+
+### Gambar Rangkaian LCD
+![alt text](?raw=true)
 
 ### 7. Hasil Pengamatan
 ![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/2a9a80becdcc0ea44bf9f88b97ef2093e253e10a/Sreenshoot/post-lab%20LCD.jpg?raw=true)
