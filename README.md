@@ -1,5 +1,5 @@
 # Praktikum Lab IV Basic Analog Electronic
-## Post-Lab LCD & Sensor Suhu LM 35
+## Post-Lab LCD & Sensor Suhu LM35
 
 Identitas
 - Nama : Walfihen
@@ -91,9 +91,9 @@ void loop() {
 }
 
 ### Gambar Rangkaian LCD
-![alt text](?raw=true)
+![alt text](https://github.com/walfihen/Post-Lab-LCD/blob/aea3b2be15bb95940cf02ffe6433aa5c831e8127/Sreenshoot/post-lab%20lcd%20(rangkaian).jpg?raw=true)
 
-### Gambar Rangkaian LCD
+### Gambar Rangkaian Sensor Suhu LM35
 ![alt text](?raw=true)
 
 ### 7. Hasil Pengamatan
